@@ -7,7 +7,8 @@ from routers import items
 app = FastAPI()
 
 app.add_middleware(
-    allow_origins=[FRONTEND_URL],
+    CORSMiddleware,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
